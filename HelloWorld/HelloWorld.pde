@@ -15,12 +15,14 @@ char space = ' '; //System Resources, use "char", choose your variables wisely f
 //
 char z = '.';
 char y = ',';
-char one = '1';
+String one = "1";
 String d = "Mr";
 String e = "Mercer";
 String f = "counts";
 String g = "to";
 String h = "10";
 String i = "by";
+int two = 1;
 print(d+z+space+e+space+f+space+g+space+h+y+space+i+space+one+z, "\n"); //Charater Escapes, \n (NEW LINE), \t (TAB)
-println("\t\t\t", d+z, e, f, g, h+y, i, one+z);
+println("\t\t\t", d+z, e, f, g, h+y, i, int(one)+two+z); //Casting, making a String into a Number
+println( int(one)+two );
