@@ -1,15 +1,8 @@
 //Global Variables
-char z;
-char y;
-String one;
-String d;
-String e;
-String f;
-String g;
-String ten;
-String h;
-int two;
-int skipCount=2;
+char z, y;
+String one, d, e, f, g, ten, h;
+int two, skipCount=2, twenty;
+float decimal=1.0, thirty; //must include a zero decimal or compiler reads as INTEGER
 //
 void setup() 
 {
@@ -24,16 +17,22 @@ void setup()
   f = "counts";
   g = "to";
   ten = "10000";
+  twenty = 10000;
+  thirty = 1000000000000.0; // 12 zeros
   h = "by";
   two = 1;
-  println(d+z, e, f, g, ten+y, h, str(two)+z); //Casting, making an INTEGER into a STRING
-  println("One plus two is", int(one)+two); //Casting is int(one), to change STRING to INTEGER
+  //println(d+z, e, f, g, ten+y, h, str(two)+z); //Casting, making an INTEGER into a STRING
+  //println("One plus two is", int(one)+two); //Casting is int(one), to change STRING to INTEGER
 }//end setup
 //
 void draw() 
 {
-  two+=1; // two+1, two++, two+=1
+  two*=skipCount; // +=, *=, /=
   println(d+z, e, f, g, ten+y, h, str(two)+z);
+  twenty/=skipCount;// Formula to count backwards from 10000 // ten-1, ten--, ten-=1
+  println(d+z, e, f, g, one+y, "backwards from", str(twenty)+z);
+  thirty/=skipCount;// Formula to count backwards from 10000 // ten-1, ten--, ten-=1
+  println(d+z, e, f, g, one+y, "backwards from", str(thirty)+z);
 }//end draw
 //
 void keyPressed() {
