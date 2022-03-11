@@ -1,6 +1,6 @@
 //Global Variables
 char z, y;
-String one, d, e, f, g, ten, h;
+String one, d, e, f, g, ten, h, a, b, c;
 int two, skipCount=2, twenty;
 float decimal=1.0, thirty; //must include a zero decimal or compiler reads as INTEGER
 //
@@ -11,12 +11,15 @@ void setup()
   //Population, Declaration, Valuing
   z = '.';
   y = ',';
-  one = "1";
-  d = "Mr";
-  e = "Mercer";
-  f = "counts";
+  one = "2";
+  d = "learning";
+  e = "multiply";
+  f = "by";
   g = "to";
   ten = "10000";
+  a = "Little";
+  b = "Timmy";
+  c = "is";
   twenty = 10000;
   thirty = 1000000000000.0; // 12 zeros
   h = "by";
@@ -28,10 +31,10 @@ void setup()
 void draw() 
 {
   two*=skipCount; // +=, *=, /=
-  println(d+z, e, f, g, ten+y, h, str(two)+z);
+  println(a, b, c, d, g, e, f, one+y, "He is currently at", str(two)+z);
   twenty/=skipCount;// Formula to count backwards from 10000 // ten-1, ten--, ten-=1
   println(d+z, e, f, g, one+y, "backwards from", str(twenty)+z);
-  thirty/=skipCount;// Formula to count backwards from 10000 // ten-1, ten--, ten-=1
+  thirty/=skipCount;
   println(d+z, e, f, g, one+y, "backwards from", str(thirty)+z);
 }//end draw
 //
