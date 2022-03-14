@@ -1,7 +1,7 @@
 //Global Variables
 char z, y;
-String one, d, e, f, g, ten, h, a, b, c, space, i, twenty;
-int two, skipCount=2;
+String one, d, e, f, g, ten, h;
+int two, skipCount=2, twenty;
 float decimal=1.0, thirty; //must include a zero decimal or compiler reads as INTEGER
 //
 void setup() 
@@ -11,31 +11,16 @@ void setup()
   //Population, Declaration, Valuing
   z = '.';
   y = ',';
-  one = "2";
-  d = "learning";
-  e = "multiply";
-  f = "by";
+  one = "1";
+  d = "Mr";
+  e = "Mercer";
+  f = "counts";
   g = "to";
-  ten = "100";
-  b = "Timmy";
-  c = "is";
-  a = "counting";
-  i = "dividing";
-  space = " ";
-  twenty = "1000000000"; //9 zeros
-  thirty = 1000000000; // 9 zeros
+  ten = "10000";
+  twenty = 10000;
+  thirty = 1000000000000.0; // 12 zeros
   h = "by";
   two = 1;
-
-  size(700, 500); //Display Geometry (Orientations): Square, Landscape, Portrait
-  //fullScreen(); //displayWidth, displayHeight
-  println("Canvas Size", width, height);
-  println("Display", "width: ", displayWidth, " height: ", displayHeight );
-  int x = width*1/4, y = height*1/4, rectWidth = width*1/2, rectHeight = height*1/2;
-  // Background as grey scale, 0-255 (notice 256 #'s)
-  //background(50);
-  // Background as colour, RGB, random(a,b)
-  rect(x, y, rectWidth, rectHeight);
   //println(d+z, e, f, g, ten+y, h, str(two)+z); //Casting, making an INTEGER into a STRING
   //println("One plus two is", int(one)+two); //Casting is int(one), to change STRING to INTEGER
 }//end setup
@@ -43,13 +28,11 @@ void setup()
 void draw() 
 {
   two*=skipCount; // +=, *=, /=
-  println(b, c, d, g, e, f, one+y, "He is currently at", str(two)+z);
-  println(b, c, a, g, ten, "(poorly)"+y, "He is currently at", int(random(99)) );
-  thirty/=skipCount;
-  println(b+space+c+space+i+space+twenty+space+f+space+one+space+"to get"+space+str(thirty)+z);
-  
-  background( color(random(0, 255), random(255), random(255)) );
-  delay(1000);
+  println(d+z, e, f, g, ten+y, h, str(two)+z);
+  twenty/=skipCount;// Formula to count backwards from 10000 // ten-1, ten--, ten-=1
+  println(d+z, e, f, g, one+y, "backwards from", str(twenty)+z);
+  thirty/=skipCount;// Formula to count backwards from 10000 // ten-1, ten--, ten-=1
+  println(d+z, e, f, g, one+y, "backwards from", str(thirty)+z);
 }//end draw
 //
 void keyPressed() {
