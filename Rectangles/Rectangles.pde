@@ -36,12 +36,13 @@ void draw()
     backgroundBlue = 0;
     strokeColor = yellowNightMode;
     fillColor = purpleNightMode;
+    println("Night Mode is working");
   } else 
   {
     backgroundBlue = int( random(255) );
     strokeColor = yellow;
     fillColor = purple;
-    println("here", backgroundBlue);
+    println("Night Mode is off");
   } //end Night Mode
   //
   background( color(random(0, 255), random(255), backgroundBlue) );
@@ -56,10 +57,16 @@ void draw()
   //End of Program
 }//End draw
 //
-void keyPressed() {
+void keyPressed() 
+{
+  if (key == 'N' || key == 'n') nightMode = true;
+  if (key == CODED && keyCode == LEFT) nightMode = false;
 }//End keyPressed
 //
-void mousePressed() {
+void mousePressed() 
+{
+  if (mouseButton == LEFT) nightMode = true;
+  if (mouseButton == RIGHT) nightMode = false;
 }//End mousePressed
 
 
